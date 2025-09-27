@@ -1,22 +1,53 @@
-// Topic: Indexers — T1.1 IntList (basic)
-// Задача: реализовать класс динамического списка целых чисел с индексатором this[int index].
-// Требования:
-// - Свойство Count — текущее количество элементов.
-// - Индексатор get должен бросать ArgumentOutOfRangeException при index < 0 или index >= Count.
-// - Индексатор set:
-//   * если index в диапазоне [0, Count-1] — заменить значение;
-//   * если index == Count — добавить значение в конец (расширение на 1);
-//   * если index > Count или index < 0 — бросать ArgumentOutOfRangeException.
-// Примечание: это упражнение тренирует базовую работу с индексатором.
+//namespace App.Topics.Indexers.T1_1_IntList;
 
-namespace App.Topics.Indexers.T1_1_IntList;
+//public class IntList
+//{
+//    private int[] _items;
+//    private int _count;
 
-public class IntList
-{
-    // Студенту:
-    // 1) Добавьте приватное хранилище (например, List<int> или массив с расширением).
-    // 2) Реализуйте свойство Count.
-    // 3) Реализуйте индексатор this[int index] с семантикой, описанной выше.
-    // 4) Добавьте конструктор(ы) при необходимости.
-    // Примечание: сейчас код преднамеренно пустой — требуется самостоятельная реализация.
-}
+//    public IntList()
+//    {
+//        _items = new int[4];
+//        _count = 0;
+//    }
+
+//    public int Count => _count;
+
+//    public int this[int index]
+//    {
+//        get
+//        {
+//            if (index < 0 || index >= _count)
+//                throw new ArgumentOutOfRangeException(nameof(index));
+
+//            return _items[index];
+//        }
+//        set
+//        {
+//            if (index < 0 || index > _count)
+//                throw new ArgumentOutOfRangeException(nameof(index));
+
+//            if (index == _count)
+//            {
+//                EnsureCapacity();
+//                _items[_count] = value;
+//                _count++;
+//            }
+//            else
+//            {
+//                _items[index] = value;
+//            }
+//        }
+//    }
+
+//    private void EnsureCapacity()
+//    {
+//        if (_count >= _items.Length)
+//        {
+//            int newCapacity = _items.Length * 2;
+//            int[] newArray = new int[newCapacity];
+//            Array.Copy(_items, newArray, _count);
+//            _items = newArray;
+//        }
+//    }
+//}
